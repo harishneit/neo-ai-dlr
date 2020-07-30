@@ -18,7 +18,6 @@ project(dlr)
 
 # The following lines should be after project()
 set_default_configuration_release()
-msvc_use_static_runtime()
 message(STATUS "CMAKE_BUILD_TYPE: " ${CMAKE_BUILD_TYPE})
 set(CMAKE_LOCAL "${PROJECT_SOURCE_DIR}/cmake")
 
@@ -532,3 +531,9 @@ if(NOT(AAR_BUILD))
 endif()
 # Group sources
 #auto_source_group("${SOURCES}")
+
+set(INSTALL_DLR OFF CACHE BOOL "allow users to install dlr to consume via cmake")
+
+if(INSTALL_DLR)
+    include(cmake/dlrInstall.cmake)
+endif()
