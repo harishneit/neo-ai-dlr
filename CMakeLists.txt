@@ -100,9 +100,6 @@ include_directories("${JSON_SRC}")
 # Add only top level *.cc files (non-RECURSE)
 FILE(GLOB DLR_SRC
     "src/*.cc"
-    ${TVM_SRC}/src/runtime/dso_library.cc
-    ${TVM_SRC}/src/runtime/cpu_device_api.cc
-    ${TVM_SRC}/src/runtime/contrib/sort/sort.cc
 )
 
 if(USE_OPENCL)
