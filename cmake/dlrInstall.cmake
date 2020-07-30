@@ -19,7 +19,7 @@ set(NEODLR_HEADERS include/dlr.h)
 
 add_library(neodlr STATIC $<TARGET_OBJECTS:objdlr>)
 
-set_target_properties(neodlr PROPERTIES PUBLIC_HEADER "include/dlr.h")
+set_target_properties(neodlr PROPERTIES PUBLIC_HEADER "include/dlr.h;include/dlr_tvm.h;include/dlr_treelite.h")
 
 install(FILES ${NEODLR_HEADERS} DESTINATION ${INSTALL_INCLUDE_DIR})
 
